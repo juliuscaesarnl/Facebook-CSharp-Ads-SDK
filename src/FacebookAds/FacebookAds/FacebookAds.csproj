@@ -1,210 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA2AAA73-9BBC-4CB1-A8F5-1AF3DEECEB89}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FacebookAds</RootNamespace>
-    <AssemblyName>FacebookAds</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <None Remove="Object\.gitignore" />
+    <None Remove="Object\Fields\.gitignore" />
+    <None Remove="Object\Values\.gitignore" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Api.cs" />
-    <Compile Include="Interfaces\AbstractCrudObjectFields.cs" />
-    <Compile Include="Interfaces\AbstractCrudObject.cs" />
-    <Compile Include="Object\Activity.cs" />
-    <Compile Include="Object\Ad.cs" />
-    <Compile Include="Object\AdAccount.cs" />
-    <Compile Include="Object\AdAccountGroup.cs" />
-    <Compile Include="Object\AdAccountGroupAccount.cs" />
-    <Compile Include="Object\AdAccountGroupUser.cs" />
-    <Compile Include="Object\AdConversionPixel.cs" />
-    <Compile Include="Object\AdCreative.cs" />
-    <Compile Include="Object\AdImage.cs" />
-    <Compile Include="Object\AdLabel.cs" />
-    <Compile Include="Object\AdPlacePageSet.cs" />
-    <Compile Include="Object\AdPreview.cs" />
-    <Compile Include="Object\AdSet.cs" />
-    <Compile Include="Object\AdsPixel.cs" />
-    <Compile Include="Object\AdsPixelStat.cs" />
-    <Compile Include="Object\AdUser.cs" />
-    <Compile Include="Object\AdVideo.cs" />
-    <Compile Include="Object\Agency.cs" />
-    <Compile Include="Object\App.cs" />
-    <Compile Include="Object\AsyncJobInsights.cs" />
-    <Compile Include="Object\BroadCategoryTargeting.cs" />
-    <Compile Include="Object\Business.cs" />
-    <Compile Include="Object\BusinessAdAccount.cs" />
-    <Compile Include="Object\BusinessProductCatalog.cs" />
-    <Compile Include="Object\Campaign.cs" />
-    <Compile Include="Object\ClickTrackingTag.cs" />
-    <Compile Include="Object\Client.cs" />
-    <Compile Include="Object\ConnectionObject.cs" />
-    <Compile Include="Object\CreditCard.cs" />
-    <Compile Include="Object\CustomAudience.cs" />
-    <Compile Include="Object\CustomAudienceMultiKey.cs" />
-    <Compile Include="Object\CustomConversion.cs" />
-    <Compile Include="Object\ExtendedCredit.cs" />
-    <Compile Include="Object\Fields\ActivityFields.cs" />
-    <Compile Include="Object\Fields\AdAccountFields.cs" />
-    <Compile Include="Object\Fields\AdAccountGroupAccountFields.cs" />
-    <Compile Include="Object\Fields\AdAccountGroupFields.cs" />
-    <Compile Include="Object\Fields\AdAccountGroupUserFields.cs" />
-    <Compile Include="Object\Fields\AdConversionPixelFields.cs" />
-    <Compile Include="Object\Fields\AdCreativeFields.cs" />
-    <Compile Include="Object\Fields\AdFields.cs" />
-    <Compile Include="Object\Fields\AdImageFields.cs" />
-    <Compile Include="Object\Fields\AdLabelFields.cs" />
-    <Compile Include="Object\Fields\AdPlacePageSetFields.cs" />
-    <Compile Include="Object\Fields\AdPreviewFields.cs" />
-    <Compile Include="Object\Fields\AdSetFields.cs" />
-    <Compile Include="Object\Fields\AdsPixelsFields.cs" />
-    <Compile Include="Object\Fields\AdsPixelStatFields.cs" />
-    <Compile Include="Object\Fields\AdUserFields.cs" />
-    <Compile Include="Object\Fields\AdVideoFields.cs" />
-    <Compile Include="Object\Fields\AsyncJobFields.cs" />
-    <Compile Include="Object\Fields\BusinessFields.cs" />
-    <Compile Include="Object\Fields\CampaignFields.cs" />
-    <Compile Include="Object\Fields\ClickTrackingTagFields.cs" />
-    <Compile Include="Object\Fields\ConnectionObjectFields.cs" />
-    <Compile Include="Object\Fields\CustomAudienceFields.cs" />
-    <Compile Include="Object\Fields\CustomAudienceMultikeySchemaFields.cs" />
-    <Compile Include="Object\Fields\CustomConversionFields.cs" />
-    <Compile Include="Object\Fields\InsightsFields.cs" />
-    <Compile Include="Object\Fields\LeadFields.cs" />
-    <Compile Include="Object\Fields\LeadgenFormFields.cs" />
-    <Compile Include="Object\Fields\LookalikeAudienceFields.cs" />
-    <Compile Include="Object\Fields\LookalikeAudienceSpecFields.cs" />
-    <Compile Include="Object\Fields\MinimumBudgetFields.cs" />
-    <Compile Include="Object\Fields\ObjectStorySpecFields.cs" />
-    <Compile Include="Object\Fields\PartnerCategoryFields.cs" />
-    <Compile Include="Object\Fields\ProductAudienceFields.cs" />
-    <Compile Include="Object\Fields\ProductCatalogFields.cs" />
-    <Compile Include="Object\Fields\ProductFeedFields.cs" />
-    <Compile Include="Object\Fields\ProductFeedScheduleFields.cs" />
-    <Compile Include="Object\Fields\ProductFeedUploadErrorFields.cs" />
-    <Compile Include="Object\Fields\ProductFeedUploadErrorSampleFields.cs" />
-    <Compile Include="Object\Fields\ProductFeedUploadFields.cs" />
-    <Compile Include="Object\Fields\ProductFields.cs" />
-    <Compile Include="Object\Fields\ProductSetFields.cs" />
-    <Compile Include="Object\Fields\ProjectFields.cs" />
-    <Compile Include="Object\Fields\RateCardFields.cs" />
-    <Compile Include="Object\Fields\ReachEstimateFields.cs" />
-    <Compile Include="Object\Fields\ReachFrequencyPredictionFields.cs" />
-    <Compile Include="Object\Fields\SystemUserFields.cs" />
-    <Compile Include="Object\Fields\TargetingDescriptionFields.cs" />
-    <Compile Include="Object\Fields\TargetingSpecsFields.cs" />
-    <Compile Include="Object\Fields\VideoThumbnailFields.cs" />
-    <Compile Include="Object\Insights.cs" />
-    <Compile Include="Object\Lead.cs" />
-    <Compile Include="Object\LeadgenForm.cs" />
-    <Compile Include="Object\LookalikeAudience.cs" />
-    <Compile Include="Object\MinimumBudget.cs" />
-    <Compile Include="Object\ObjectStorySpec.cs" />
-    <Compile Include="Object\Page.cs" />
-    <Compile Include="Object\PartnerCategory.cs" />
-    <Compile Include="Object\Persona.cs" />
-    <Compile Include="Object\Product.cs" />
-    <Compile Include="Object\ProductAudience.cs" />
-    <Compile Include="Object\ProductCatalog.cs" />
-    <Compile Include="Object\ProductFeed.cs" />
-    <Compile Include="Object\ProductFeedUpload.cs" />
-    <Compile Include="Object\ProductFeedUploadError.cs" />
-    <Compile Include="Object\ProductFeedUploadErrorSample.cs" />
-    <Compile Include="Object\ProductGroup.cs" />
-    <Compile Include="Object\ProductSet.cs" />
-    <Compile Include="Object\Project.cs" />
-    <Compile Include="Object\RateCard.cs" />
-    <Compile Include="Object\ReachEstimate.cs" />
-    <Compile Include="Object\ReachFrequencyPrediction.cs" />
-    <Compile Include="Object\SystemUser.cs" />
-    <Compile Include="Object\TargetingDescription.cs" />
-    <Compile Include="Object\TargetingSearch.cs" />
-    <Compile Include="Object\TargetingSpecs.cs" />
-    <Compile Include="Object\Transaction.cs" />
-    <Compile Include="Object\UserPermission.cs" />
-    <Compile Include="Object\Values\AdAccountRoles.cs" />
-    <Compile Include="Object\Values\AdBuyingTypes.cs" />
-    <Compile Include="Object\Values\AdFormats.cs" />
-    <Compile Include="Object\Values\AdObjectives.cs" />
-    <Compile Include="Object\Values\AdsPixelStatAggregations.cs" />
-    <Compile Include="Object\Values\AppRoles.cs" />
-    <Compile Include="Object\Values\ArchivableCrudObjectEffectiveStatuses.cs" />
-    <Compile Include="Object\Values\BillingEvents.cs" />
-    <Compile Include="Object\Values\BusinessRoles.cs" />
-    <Compile Include="Object\Values\CallToActionTypes.cs" />
-    <Compile Include="Object\Values\ConnectionObjectTypes.cs" />
-    <Compile Include="Object\Values\CustomAudienceSubtypes.cs" />
-    <Compile Include="Object\Values\CustomAudienceTypes.cs" />
-    <Compile Include="Object\Values\FeedEncoding.cs" />
-    <Compile Include="Object\Values\InsightsActionAttributionWindows.cs" />
-    <Compile Include="Object\Values\InsightsActionBreakdowns.cs" />
-    <Compile Include="Object\Values\InsightsActionReportTimes.cs" />
-    <Compile Include="Object\Values\InsightsBreakdowns.cs" />
-    <Compile Include="Object\Values\InsightsIncrements.cs" />
-    <Compile Include="Object\Values\InsightsLevels.cs" />
-    <Compile Include="Object\Values\InsightsOperators.cs" />
-    <Compile Include="Object\Values\InsightsPresets.cs" />
-    <Compile Include="Object\Values\OptimizationGoals.cs" />
-    <Compile Include="Object\Values\PageRoles.cs" />
-    <Compile Include="Object\Values\PageTypes.cs" />
-    <Compile Include="Object\Values\ReachFrequencyPredictionActions.cs" />
-    <Compile Include="Object\Values\ReachFrequencyPredictionStatuses.cs" />
-    <Compile Include="Object\Values\TermsOfService.cs" />
-    <Compile Include="Object\Values\UserPermissionRoles.cs" />
-    <Compile Include="Object\VideoThumbnail.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Facebook" Version="7.0.6">
+      <NoWarn>NU1701</NoWarn>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <Folder Include="Object\Fields\" />
+    <Folder Include="Object\Values\" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
