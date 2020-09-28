@@ -4,6 +4,7 @@
  * Namespace
  * @copyright (c) 2016 | Searchresult Performancemarketing
  */
+
 namespace SdkConverter;
 
 /**
@@ -14,7 +15,8 @@ if (defined("__SDK_CONVERTER__") == false) exit("Application not initialized");
 /**
  * Use classes
  */
-use \ReflectionClass;
+
+use ReflectionClass;
 
 /**
  * Class AbstractClassReader
@@ -105,6 +107,15 @@ abstract class AbstractClassReader
     }
 
     /**
+     * Get the name of the (sub)class
+     * @return string
+     */
+    public static function className()
+    {
+        return get_called_class();
+    }
+
+    /**
      * Gets the class name assigned to the module
      * @return string
      */
@@ -139,16 +150,6 @@ abstract class AbstractClassReader
     {
         return $this->path;
     }
-
-
-    /**
-     * Get the name of the (sub)class
-     * @return string
-     */
-    public static function className() {
-        return get_called_class();
-    }
-
 
     /**
      * Get the output directory path

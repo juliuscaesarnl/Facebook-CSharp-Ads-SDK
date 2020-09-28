@@ -14,10 +14,7 @@ namespace FacebookAds.Object.Values
     public class <?= $class->getClassName(); ?> : AbstractCrudObjectFields
     {
         <?php foreach($class->getConstants() as $constant => $value): ?>
-public const string <?= $constant; ?> = "<?= $value; ?>";
+        public const string <?= $constant; ?> = "<?= $value; ?>";
         <?php endforeach; ?>
-
     }
 }
-
-

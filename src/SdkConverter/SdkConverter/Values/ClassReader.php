@@ -4,6 +4,7 @@
  * Namespace
  * @copyright (c) 2016 | Searchresult Performancemarketing
  */
+
 namespace SdkConverter\Values;
 
 /**
@@ -14,8 +15,9 @@ if (defined("__SDK_CONVERTER__") == false) exit("Application not initialized");
 /**
  * Use classes
  */
-use \SdkConverter\Converter;
-use \SdkConverter\AbstractClassReader;
+
+use SdkConverter\AbstractClassReader;
+use SdkConverter\Converter;
 
 /**
  * Class ClassReader
@@ -30,7 +32,7 @@ class ClassReader extends AbstractClassReader
      */
     public function getOutputLocation()
     {
-        return realpath(__DIR__.'/../..').Converter::OUTPUT_DIR_VALUES;
+        return realpath(__DIR__ . '/../..') . Converter::OUTPUT_DIR_VALUES;
     }
 
     /**
@@ -39,7 +41,7 @@ class ClassReader extends AbstractClassReader
      */
     public function getOutputFileLocation()
     {
-        return realpath(__DIR__.'/../..').Converter::OUTPUT_DIR_VALUES."{$this->getClassName()}.cs";
+        return realpath(__DIR__ . '/../..') . Converter::OUTPUT_DIR_VALUES . "{$this->getClassName()}.cs";
     }
 
     /**
@@ -48,7 +50,7 @@ class ClassReader extends AbstractClassReader
      */
     public function getTemplateLocation()
     {
-        return __DIR__.'/../Templates/FacebookAds.Object.Values.php';
+        return __DIR__ . '/../Templates/FacebookAds.Object.Values.php';
     }
 
     /**

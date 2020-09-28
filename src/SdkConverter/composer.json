@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": "^7.3",
+        "facebook/php-business-sdk": "^5.0"
+    }
+}
