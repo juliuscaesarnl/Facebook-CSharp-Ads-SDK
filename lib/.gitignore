@@ -1,4 +1,0 @@
-# This is where all external libraries are stored that are used
-# whilst developing the PHP and C# code
-*
-!.gitignore

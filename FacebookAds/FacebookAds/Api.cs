@@ -10,7 +10,7 @@ namespace FacebookAds
         /// <summary>
         ///     The version of the graph API we're using
         /// </summary>
-        private const string VERSION = "v5.0";
+        private const string VERSION = "v7.0";
 
         /// <summary>
         ///     Initializes the application via tokens
